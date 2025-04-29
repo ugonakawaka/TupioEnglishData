@@ -1,74 +1,73 @@
 {
-	"title": "Essential Business Vocabulary",
-	"type": "vocabulary",
-	"notes": "Common business terms for professional conversations",
-	"tags": [
-		"business",
-		"professional",
-		"essential"
-	],
-	"categoryTags": [
-		"work",
-		"meetings"
-	],
-
-	
-	"lastUpdated": "2025-04-27T10:00:00Z",
-	"vocabularyItems": [
-		{
-			"id": "voc_001",
-			"order": 1,
-			"word": "agenda",
-			"phonetic": "əˈdʒɛndə",
-			"partOfSpeech": "noun",
-			"meaning": "A list of items to be discussed at a meeting",
-			"example": "The meeting agenda was distributed a day in advance.",
-			"profileId": "default",
-			"notes": "Often used in business contexts"
-		},
-		{
-			"id": "voc_002",
-			"order": 2,
-			"word": "collaborate",
-			"phonetic": "kəˈlæbəˌreɪt",
-			"partOfSpeech": "verb",
-			"meaning": "To work together with someone to produce something",
-			"example": "Our teams collaborate on many projects.",
-			"profileId": "default",
-			"notes": null
-		},
-		{
-			"id": "voc_003",
-			"order": 3,
-			"word": "deadline",
-			"phonetic": "ˈdɛdˌlaɪn",
-			"partOfSpeech": "noun",
-			"meaning": "A time or date by which something must be completed",
-			"example": "We need to meet our deadline by the end of this week.",
-			"profileId": "default",
-			"notes": "Important term in project management"
-		},
-		{
-			"id": "voc_004",
-			"order": 4,
-			"word": "infrastructure",
-			"phonetic": "ˈɪnfrəˌstrʌktʃər",
-			"partOfSpeech": "noun",
-			"meaning": "The basic physical and organizational structures needed for operation",
-			"example": "The company is investing in its IT infrastructure.",
-			"profileId": "default",
-			"notes": null
-		},
-		{
-			"id": "voc_005",
-			"order": 5,
-			"word": "negotiate",
-			"phonetic": "nɪˈɡoʊʃiˌeɪt",
-			"partOfSpeech": "verb",
-			"meaning": "To discuss and reach agreement through compromise",
-			"example": "We need to negotiate the terms of the contract.",
-			"profileId": "default",
-			"notes": "Key skill in business relationships"
-		}
-	]
+  "title": "Essential Business Vocabulary",
+  "type": "vocabulary",
+  "notes": "Common business terms for professional conversations",
+  "tags": [
+    "business",
+    "professional",
+    "essential"
+  ],
+  "categoryTags": [
+    "work",
+    "meetings"
+  ],
+  "lastUpdated": "2025-04-27T10:00:00Z",
+  "vocabularyItems": [
+    {
+      "id": "voc_001",
+      "order": 1,
+      "word": "agenda",
+      "phonetic": "əˈdʒɛndə",
+      "partOfSpeech": "noun",
+      "meaning": "A list of items to be discussed at a meeting",
+      "example": "The meeting agenda was distributed a day in advance.",
+      "profileId": "default",
+      "notes": "Often used in business contexts"
+    },
+    {
+      "id": "voc_002",
+      "order": 2,
+      "word": "collaborate",
+      "phonetic": "kəˈlæbəˌreɪt",
+      "partOfSpeech": "verb",
+      "meaning": "To work together with someone to produce something",
+      "example": "Our teams collaborate on many projects.",
+      "profileId": "default",
+      "notes": null
+    },
+    {
+      "id": "voc_003",
+      "order": 3,
+      "word": "deadline",
+      "phonetic": "ˈdɛdˌlaɪn",
+      "partOfSpeech": "noun",
+      "meaning": "A time or date by which something must be completed",
+      "example": "We need to meet our deadline by the end of this week.",
+      "profileId": "default",
+      "notes": "Important term in project management"
+    },
+    {
+      "id": "voc_004",
+      "order": 4,
+      "word": "infrastructure",
+      "phonetic": "ˈɪnfrəˌstrʌktʃər",
+      "partOfSpeech": "noun",
+      "meaning": "The basic physical and organizational structures needed for operation",
+      "example": "The company is investing in its IT infrastructure.",
+      "profileId": "default",
+      "notes": null
+    },
+    {
+      "id": "voc_005",
+      "order": 5,
+      "word": "negotiate",
+      "phonetic": "nɪˈɡoʊʃiˌeɪt",
+      "partOfSpeech": "verb",
+      "meaning": "To discuss and reach agreement through compromise",
+      "example": "We need to negotiate the terms of the contract.",
+      "profileId": "default",
+      "notes": "Key skill in business relationships"
+    }
+  ],
+  "id": "e166159c-4254-44ca-9321-04d08e26f24f"
 }
