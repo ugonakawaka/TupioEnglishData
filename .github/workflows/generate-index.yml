@@ -15,6 +15,11 @@ on:
 env:
   TARGET_DIR: ${{ github.event.inputs.target_directory || './public/v1/' }}
 
+# 同時実行を制限して競合を防ぐ
+concurrency:
+  group: generate-index-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   generate-index:
     runs-on: ubuntu-latest
@@ -23,6 +28,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           token: ${{ secrets.PAT_TOKEN }}
+          fetch-depth: 0  # 完全な履歴を取得
           
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -34,15 +40,18 @@ jobs:
         env:
           TARGET_DIR: ${{ env.TARGET_DIR }}
         
-      - name: Commit changes
+      - name: Fetch latest changes before commit
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git fetch origin
+          git pull --no-rebase  # マージ戦略を使用
+        
+      - name: Commit changes
+        run: |
           git add index.json
           git diff --staged --quiet || git commit -m "Update index.json"
           
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.PAT_TOKEN }}
-          branch: ${{ github.ref }}
+      - name: Push changes directly
+        run: |
+          git push https://${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
