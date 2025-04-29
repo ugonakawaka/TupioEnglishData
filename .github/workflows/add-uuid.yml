@@ -5,6 +5,14 @@ on:
     paths:
       - '**.json'
   workflow_dispatch:
+    inputs:
+      target_directory:
+        description: 'Target directory to process JSON files'
+        required: true
+        default: './public/v1/'
+
+env:
+  TARGET_DIR: ${{ github.event.inputs.target_directory || './public/v1/' }}
 
 jobs:
   add-uuid:
@@ -12,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          token: ${{ secrets.PAT_TOKEN }}  # 個人アクセストークンを使用
+          token: ${{ secrets.PAT_TOKEN }}
           
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -23,7 +31,9 @@ jobs:
         run: npm install uuid
         
       - name: Add UUID to JSON files
-        run: node .github/scripts/add-uuid-v1.js
+        run: node .github/scripts/add-uuid.js
+        env:
+          TARGET_DIR: ${{ env.TARGET_DIR }}
         
       - name: Commit changes
         run: |
