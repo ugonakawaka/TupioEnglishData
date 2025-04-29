@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - '**.json'
+    paths-ignore:
+      - 'index.json'  # このファイルの変更はワークフローをトリガーしない
   workflow_dispatch:
     inputs:
       target_directory:
