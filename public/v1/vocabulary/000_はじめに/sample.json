@@ -11,7 +11,7 @@
     "work",
     "meetings"
   ],
-  "lastUpdated": "2025-04-27T10:00:00Z",
+  "lastUpdated": "2025-04-29T10:10:46.510Z",
   "vocabularyItems": [
     {
       "id": "voc_001",
@@ -68,5 +68,6 @@
       "profileId": "default",
       "notes": "Key skill in business relationships"
     }
-  ]
+  ],
+  "id": "7c6cc7ee-bb02-4a0d-bb29-ce962d29f1b2"
 }
