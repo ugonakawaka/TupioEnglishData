@@ -16,35 +16,52 @@ function processDirectory(dir) {
     if (stat.isDirectory()) {
       processDirectory(filePath);
     } else if (file.endsWith('.json')) {
-      addUuidIfNeeded(filePath);
+      updateJsonFile(filePath);
     }
   }
 }
 
-// JSONファイルにUUIDを追加する関数
-function addUuidIfNeeded(filePath) {
+// JSONファイルを更新する関数
+function updateJsonFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const json = JSON.parse(content);
     
     let modified = false;
+    const now = new Date().toISOString(); // ISO形式の現在時刻
     
-    // オブジェクトまたは配列内のオブジェクトにidがない場合、UUIDを追加
+    // 配列の場合
     if (Array.isArray(json)) {
       json.forEach(item => {
-        if (typeof item === 'object' && item !== null && !item.id) {
-          item.id = uuidv4();
+        if (typeof item === 'object' && item !== null) {
+          // idフィールドがない場合、追加
+          if (!item.id) {
+            item.id = uuidv4();
+            modified = true;
+          }
+          
+          // lastUpdatedフィールドを更新
+          item.lastUpdated = now;
           modified = true;
         }
       });
-    } else if (typeof json === 'object' && json !== null && !json.id) {
-      json.id = uuidv4();
+    } 
+    // オブジェクトの場合
+    else if (typeof json === 'object' && json !== null) {
+      // idフィールドがない場合、追加
+      if (!json.id) {
+        json.id = uuidv4();
+        modified = true;
+      }
+      
+      // lastUpdatedフィールドを更新
+      json.lastUpdated = now;
       modified = true;
     }
     
     if (modified) {
       fs.writeFileSync(filePath, JSON.stringify(json, null, 2));
-      console.log(`Added UUID to ${filePath}`);
+      console.log(`Updated ${filePath} with ID and lastUpdated timestamp`);
     }
   } catch (error) {
     console.error(`Error processing ${filePath}: ${error.message}`);
