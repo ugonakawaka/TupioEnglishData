@@ -3,8 +3,8 @@ name: Add UUID to JSON files
 on:
   push:
     paths:
-      - '**.json'
-      - '!index.json'  # 除外したいパスには ! を先頭につける
+      - 'public/v1/**.json'
+      - '!public/v1/index.json'  # 除外したいパスには ! を先頭につける
   workflow_dispatch:
     inputs:
       target_directory:
