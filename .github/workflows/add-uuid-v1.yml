@@ -21,7 +21,7 @@ jobs:
         run: npm install uuid
         
       - name: Add UUID to JSON files
-        run: node .github/scripts/add-uuid.js
+        run: node .github/scripts/add-uuid-v1.js
         
       - name: Commit changes
         run: |
