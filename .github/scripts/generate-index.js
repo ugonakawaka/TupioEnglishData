@@ -3,7 +3,7 @@ const path = require('path');
 
 // 環境変数からtargetDirを取得、なければデフォルト値を使用
 const targetDir = process.env.TARGET_DIR || './public/v1/';
-const outputFilePath = './index.json';
+const outputFilePath = './public/v1/index.json';
 
 // 処理したファイルの情報を保存する配列
 const fileRegistry = [];
