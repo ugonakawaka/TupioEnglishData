@@ -4,8 +4,7 @@ on:
   push:
     paths:
       - '**.json'
-    paths-ignore:
-      - 'index.json'  # このファイルの変更はワークフローをトリガーしない
+      - '!index.json'  # 除外したいパスには ! を先頭につける
   workflow_dispatch:
     inputs:
       target_directory:
