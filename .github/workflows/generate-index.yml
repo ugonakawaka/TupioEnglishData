@@ -1,0 +1,48 @@
+name: Generate index.json
+
+on:
+  workflow_run:
+    workflows: ["Add UUID to JSON files"]
+    types:
+      - completed
+  workflow_dispatch:
+    inputs:
+      target_directory:
+        description: 'Target directory to process JSON files'
+        required: true
+        default: './public/v1/'
+
+env:
+  TARGET_DIR: ${{ github.event.inputs.target_directory || './public/v1/' }}
+
+jobs:
+  generate-index:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+          
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+        
+      - name: Generate index.json
+        run: node .github/scripts/generate-index.js
+        env:
+          TARGET_DIR: ${{ env.TARGET_DIR }}
+        
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add index.json
+          git diff --staged --quiet || git commit -m "Update index.json"
+          
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PAT_TOKEN }}
+          branch: ${{ github.ref }}

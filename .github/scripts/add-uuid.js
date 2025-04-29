@@ -2,8 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 
-// JSONファイルを探す対象ディレクトリ
-const targetDir = './public/v1/'; // 対象ディレクトリに変更してください
+// 環境変数からtargetDirを取得、なければデフォルト値を使用
+const targetDir = process.env.TARGET_DIR || './public/v1/';
+console.log(`Processing JSON files in: ${targetDir}`);
 
 // ディレクトリ内のJSONファイルを再帰的に処理する関数
 function processDirectory(dir) {
