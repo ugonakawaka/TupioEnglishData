@@ -50,7 +50,7 @@ jobs:
       - name: Commit changes
         run: |
           git add index.json
-          git diff --staged --quiet || git commit -m "Update index.json"
+          git diff --staged --quiet || git commit -m "Update index.json [skip ci]"
           
       - name: Push changes directly
         run: |
