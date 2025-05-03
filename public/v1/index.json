@@ -1,12 +1,16 @@
 {
-  "generatedAt": "2025-04-29T11:32:04.078Z",
+  "generatedAt": "2025-05-03T10:17:09.701Z",
   "files": [
     {
+      "path": "public/v1/index.json",
+      "lastUpdated": "2025-05-03T10:16:51.298Z",
+      "id": "944532fd-cc4b-4d89-ac49-fd7ea0b35572"
+    },
+    {
       "path": "public/v1/vocabulary/000_はじめに/sample.json",
-      "lastUpdated": "2025-04-29T11:31:48.274Z",
-      "id": "7c6cc7ee-bb02-4a0d-bb29-ce962d29f1b2"
+      "lastUpdated": "2025-05-03T10:16:51.299Z",
+      "id": "9efc17b3-e492-4d03-88e4-a6843f2e8740",
+      "type": "vocabulary"
     }
-  ],
-  "id": "944532fd-cc4b-4d89-ac49-fd7ea0b35572",
-  "lastUpdated": "2025-05-03T10:16:51.298Z"
+  ]
 }
