@@ -5,8 +5,8 @@ const path = require('path');
 const targetDir = process.env.TARGET_DIR || './public/v1/';
 const outputFilePath = './public/v1/index.json';
 
-// 処理したファイルの情報を保存する配列
-const fileRegistry = [];
+// 処理したファイルの情報を保存するオブジェクト（パスをキーにする）
+const fileRegistry = {};
 
 // ディレクトリ内のJSONファイルを再帰的に処理する関数
 function processDirectory(dir) {
@@ -34,7 +34,7 @@ function extractFileInfo(filePath) {
       path: filePath,
       lastUpdated: null,
       id: null,
-      type: null // typeフィールドを追加
+      type: null
     };
     
     // 配列の場合
@@ -42,17 +42,23 @@ function extractFileInfo(filePath) {
       if (json.length > 0 && typeof json[0] === 'object' && json[0] !== null) {
         fileInfo.lastUpdated = json[0].lastUpdated;
         fileInfo.id = json[0].id;
-        fileInfo.type = json[0].type; // typeプロパティを取得
+        fileInfo.type = json[0].type;
       }
     } 
     // オブジェクトの場合
     else if (typeof json === 'object' && json !== null) {
       fileInfo.lastUpdated = json.lastUpdated;
       fileInfo.id = json.id;
-      fileInfo.type = json.type; // typeプロパティを取得
+      fileInfo.type = json.type;
     }
     
-    fileRegistry.push(fileInfo);
+    // 同じパスのエントリがすでに存在する場合はログに記録
+    if (fileRegistry[filePath]) {
+      console.log(`Overwriting existing entry for ${filePath}`);
+    }
+    
+    // パスをキーにして保存（同じパスのエントリは上書きされる）
+    fileRegistry[filePath] = fileInfo;
     console.log(`Extracted info from ${filePath} (Type: ${fileInfo.type || 'N/A'})`);
     
   } catch (error) {
@@ -63,13 +69,16 @@ function extractFileInfo(filePath) {
 // ファイルレジストリをindex.jsonとして保存する関数
 function saveIndex() {
   try {
+    // オブジェクトの値（fileInfoオブジェクト）のみを配列に変換
+    const filesArray = Object.values(fileRegistry);
+    
     const indexData = {
       generatedAt: new Date().toISOString(),
-      files: fileRegistry
+      files: filesArray
     };
     
     fs.writeFileSync(outputFilePath, JSON.stringify(indexData, null, 2));
-    console.log(`File index saved to ${outputFilePath}`);
+    console.log(`File index saved to ${outputFilePath} with ${filesArray.length} unique entries`);
   } catch (error) {
     console.error(`Error saving index: ${error.message}`);
   }
