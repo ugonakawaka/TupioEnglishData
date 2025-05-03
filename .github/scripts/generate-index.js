@@ -27,6 +27,12 @@ function processDirectory(dir) {
 // JSONファイルから情報を抽出する関数
 function extractFileInfo(filePath) {
   try {
+    // index.json自体は処理対象から除外する
+    if (path.basename(filePath) === 'index.json') {
+      console.log(`Skipping index.json file: ${filePath}`);
+      return;
+    }
+    
     const content = fs.readFileSync(filePath, 'utf8');
     const json = JSON.parse(content);
     
