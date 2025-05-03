@@ -1,0 +1,97 @@
+{
+  "title": "Advanced Business Vocabulary",
+  "type": "vocabulary",
+  "notes": "Sophisticated business terminology for executive-level communications",
+  "tags": [
+    "business",
+    "advanced",
+    "corporate",
+    "executive"
+  ],
+  "categoryTags": [
+    "management",
+    "strategy",
+    "finance"
+  ],
+  "lastUpdated": "2025-05-03T14:30:22.578Z",
+  "vocabularyItems": [
+    {
+      "id": "voc_101",
+      "order": 1,
+      "word": "synergy",
+      "phonetic": "ˈsɪnərdʒi",
+      "partOfSpeech": "noun",
+      "meaning": "The interaction of elements that when combined produce a total effect greater than the sum of the individual elements",
+      "example": "The merger created significant synergies between the marketing departments.",
+      "profileId": "advanced",
+      "notes": "Commonly used in merger and acquisition contexts"
+    },
+    {
+      "id": "voc_102",
+      "order": 2,
+      "word": "paradigm shift",
+      "phonetic": "ˈpærəˌdaɪm ʃɪft",
+      "partOfSpeech": "noun",
+      "meaning": "A fundamental change in approach or underlying assumptions",
+      "example": "The move to remote work represented a paradigm shift in corporate culture.",
+      "profileId": "advanced",
+      "notes": "Often used when discussing major strategic changes"
+    },
+    {
+      "id": "voc_103",
+      "order": 3,
+      "word": "leverage",
+      "phonetic": "ˈlevərɪdʒ",
+      "partOfSpeech": "verb",
+      "meaning": "To use something to maximum advantage",
+      "example": "We need to leverage our expertise in the new market.",
+      "profileId": "advanced",
+      "notes": "Has specific meanings in finance as well as general business contexts"
+    },
+    {
+      "id": "voc_104",
+      "order": 4,
+      "word": "scalability",
+      "phonetic": "ˌskeɪləˈbɪləti",
+      "partOfSpeech": "noun",
+      "meaning": "The capability of a system or business to handle increased demand or growth",
+      "example": "The scalability of our cloud infrastructure is critical to our expansion plans.",
+      "profileId": "advanced",
+      "notes": "Essential concept in business strategy and technology planning"
+    },
+    {
+      "id": "voc_105",
+      "order": 5,
+      "word": "acquisition",
+      "phonetic": "ˌækwɪˈzɪʃən",
+      "partOfSpeech": "noun",
+      "meaning": "The act of acquiring something, especially a company or asset",
+      "example": "The acquisition of our competitor strengthened our market position.",
+      "profileId": "advanced",
+      "notes": "Key term in corporate growth strategies"
+    },
+    {
+      "id": "voc_106",
+      "order": 6,
+      "word": "stakeholder",
+      "phonetic": "ˈsteɪkˌhoʊldər",
+      "partOfSpeech": "noun",
+      "meaning": "A person or group with an interest in a project or enterprise",
+      "example": "We need to consider all stakeholders when making this decision.",
+      "profileId": "advanced",
+      "notes": "Central concept in corporate governance"
+    },
+    {
+      "id": "voc_107",
+      "order": 7,
+      "word": "diversification",
+      "phonetic": "daɪˌvɜrsɪfɪˈkeɪʃən",
+      "partOfSpeech": "noun",
+      "meaning": "The process of expanding into different markets or products to reduce risk",
+      "example": "The company's diversification strategy included entering three new sectors.",
+      "profileId": "advanced",
+      "notes": "Important concept in investment and business strategy"
+    }
+  ],
+  "id": "67e8a491-3b24-4f78-9a5d-c38e7f9b6d12"
+}
