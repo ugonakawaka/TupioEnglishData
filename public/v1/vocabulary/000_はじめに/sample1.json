@@ -1,97 +1,73 @@
 {
-  "title": "Advanced Business Vocabulary",
+  "title": "Essential Business Vocabulary",
   "type": "vocabulary",
-  "notes": "Sophisticated business terminology for executive-level communications",
+  "notes": "Common business terms for professional conversations",
   "tags": [
     "business",
-    "advanced",
-    "corporate",
-    "executive"
+    "professional",
+    "essential"
   ],
   "categoryTags": [
-    "management",
-    "strategy",
-    "finance"
+    "work",
+    "meetings"
   ],
   "lastUpdated": "2025-05-03T10:26:12.645Z",
   "vocabularyItems": [
     {
-      "id": "voc_101",
+      "id": "voc_001",
       "order": 1,
-      "word": "synergy",
-      "phonetic": "ˈsɪnərdʒi",
+      "word": "agenda",
+      "phonetic": "əˈdʒɛndə",
       "partOfSpeech": "noun",
-      "meaning": "The interaction of elements that when combined produce a total effect greater than the sum of the individual elements",
-      "example": "The merger created significant synergies between the marketing departments.",
-      "profileId": "advanced",
-      "notes": "Commonly used in merger and acquisition contexts"
+      "meaning": "A list of items to be discussed at a meeting",
+      "example": "The meeting agenda was distributed a day in advance.",
+      "profileId": "default",
+      "notes": "Often used in business contexts"
     },
     {
-      "id": "voc_102",
+      "id": "voc_002",
       "order": 2,
-      "word": "paradigm shift",
-      "phonetic": "ˈpærəˌdaɪm ʃɪft",
-      "partOfSpeech": "noun",
-      "meaning": "A fundamental change in approach or underlying assumptions",
-      "example": "The move to remote work represented a paradigm shift in corporate culture.",
-      "profileId": "advanced",
-      "notes": "Often used when discussing major strategic changes"
-    },
-    {
-      "id": "voc_103",
-      "order": 3,
-      "word": "leverage",
-      "phonetic": "ˈlevərɪdʒ",
+      "word": "collaborate",
+      "phonetic": "kəˈlæbəˌreɪt",
       "partOfSpeech": "verb",
-      "meaning": "To use something to maximum advantage",
-      "example": "We need to leverage our expertise in the new market.",
-      "profileId": "advanced",
-      "notes": "Has specific meanings in finance as well as general business contexts"
+      "meaning": "To work together with someone to produce something",
+      "example": "Our teams collaborate on many projects.",
+      "profileId": "default",
+      "notes": null
     },
     {
-      "id": "voc_104",
+      "id": "voc_003",
+      "order": 3,
+      "word": "deadline",
+      "phonetic": "ˈdɛdˌlaɪn",
+      "partOfSpeech": "noun",
+      "meaning": "A time or date by which something must be completed",
+      "example": "We need to meet our deadline by the end of this week.",
+      "profileId": "default",
+      "notes": "Important term in project management"
+    },
+    {
+      "id": "voc_004",
       "order": 4,
-      "word": "scalability",
-      "phonetic": "ˌskeɪləˈbɪləti",
+      "word": "infrastructure",
+      "phonetic": "ˈɪnfrəˌstrʌktʃər",
       "partOfSpeech": "noun",
-      "meaning": "The capability of a system or business to handle increased demand or growth",
-      "example": "The scalability of our cloud infrastructure is critical to our expansion plans.",
-      "profileId": "advanced",
-      "notes": "Essential concept in business strategy and technology planning"
+      "meaning": "The basic physical and organizational structures needed for operation",
+      "example": "The company is investing in its IT infrastructure.",
+      "profileId": "default",
+      "notes": null
     },
     {
-      "id": "voc_105",
+      "id": "voc_005",
       "order": 5,
-      "word": "acquisition",
-      "phonetic": "ˌækwɪˈzɪʃən",
-      "partOfSpeech": "noun",
-      "meaning": "The act of acquiring something, especially a company or asset",
-      "example": "The acquisition of our competitor strengthened our market position.",
-      "profileId": "advanced",
-      "notes": "Key term in corporate growth strategies"
-    },
-    {
-      "id": "voc_106",
-      "order": 6,
-      "word": "stakeholder",
-      "phonetic": "ˈsteɪkˌhoʊldər",
-      "partOfSpeech": "noun",
-      "meaning": "A person or group with an interest in a project or enterprise",
-      "example": "We need to consider all stakeholders when making this decision.",
-      "profileId": "advanced",
-      "notes": "Central concept in corporate governance"
-    },
-    {
-      "id": "voc_107",
-      "order": 7,
-      "word": "diversification",
-      "phonetic": "daɪˌvɜrsɪfɪˈkeɪʃən",
-      "partOfSpeech": "noun",
-      "meaning": "The process of expanding into different markets or products to reduce risk",
-      "example": "The company's diversification strategy included entering three new sectors.",
-      "profileId": "advanced",
-      "notes": "Important concept in investment and business strategy"
+      "word": "negotiate",
+      "phonetic": "nɪˈɡoʊʃiˌeɪt",
+      "partOfSpeech": "verb",
+      "meaning": "To discuss and reach agreement through compromise",
+      "example": "We need to negotiate the terms of the contract.",
+      "profileId": "default",
+      "notes": "Key skill in business relationships"
     }
   ],
-  "id": "67e8a491-3b24-4f78-9a5d-c38e7f9b6d12"
+  "id": "73a76156-9087-48b5-8a2f-a6f14d9daf3b"
 }
