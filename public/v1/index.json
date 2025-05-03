@@ -1,18 +1,22 @@
 {
-  "generatedAt": "2025-05-03T10:17:09.701Z",
+  "generatedAt": "2025-05-03T10:26:27.461Z",
   "files": [
     {
       "path": "public/v1/index.json",
-      "lastUpdated": "2025-05-03T10:16:51.298Z",
-      "id": "944532fd-cc4b-4d89-ac49-fd7ea0b35572"
+      "lastUpdated": "2025-05-03T10:26:12.643Z",
+      "id": "b024158f-c054-4329-a427-f390619e302f"
     },
     {
       "path": "public/v1/vocabulary/000_はじめに/sample.json",
-      "lastUpdated": "2025-05-03T10:16:51.299Z",
-      "id": "9efc17b3-e492-4d03-88e4-a6843f2e8740",
+      "lastUpdated": "2025-05-03T10:26:12.645Z",
+      "id": "73a76156-9087-48b5-8a2f-a6f14d9daf3b",
+      "type": "vocabulary"
+    },
+    {
+      "path": "public/v1/vocabulary/000_はじめに/sample1.json",
+      "lastUpdated": "2025-05-03T10:26:12.645Z",
+      "id": "67e8a491-3b24-4f78-9a5d-c38e7f9b6d12",
       "type": "vocabulary"
     }
-  ],
-  "id": "b024158f-c054-4329-a427-f390619e302f",
-  "lastUpdated": "2025-05-03T10:26:12.643Z"
+  ]
 }
