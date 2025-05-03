@@ -33,7 +33,8 @@ function extractFileInfo(filePath) {
     let fileInfo = {
       path: filePath,
       lastUpdated: null,
-      id: null
+      id: null,
+      type: null // typeフィールドを追加
     };
     
     // 配列の場合
@@ -41,16 +42,18 @@ function extractFileInfo(filePath) {
       if (json.length > 0 && typeof json[0] === 'object' && json[0] !== null) {
         fileInfo.lastUpdated = json[0].lastUpdated;
         fileInfo.id = json[0].id;
+        fileInfo.type = json[0].type; // typeプロパティを取得
       }
     } 
     // オブジェクトの場合
     else if (typeof json === 'object' && json !== null) {
       fileInfo.lastUpdated = json.lastUpdated;
       fileInfo.id = json.id;
+      fileInfo.type = json.type; // typeプロパティを取得
     }
     
     fileRegistry.push(fileInfo);
-    console.log(`Extracted info from ${filePath}`);
+    console.log(`Extracted info from ${filePath} (Type: ${fileInfo.type || 'N/A'})`);
     
   } catch (error) {
     console.error(`Error processing ${filePath}: ${error.message}`);
